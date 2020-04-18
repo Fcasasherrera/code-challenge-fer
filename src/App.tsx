@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import 'antd/dist/antd.css';
 import Layout from "./components/Layout";
 import { HomePage } from "./pages/Home";
+import { TasksPage } from "./pages/Task";
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <HomePage />
+          </Route>
+          <Route exact path="/Tasks">
+            <TasksPage />
           </Route>
         </Switch>
       </Layout>

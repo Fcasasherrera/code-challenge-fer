@@ -2,9 +2,7 @@
 import React, { useState } from "react";
 import '../App.css';
 import { Row, Col, Card, Button } from 'antd';
-import { CardChat } from "../components/CardChat";
-import { ListLinks } from "../components/ListLinks";
-import { ListTasks } from "../components/ListTasks";
+import { CarouselComponent } from "../components/Carousel";
 
 const { Meta, } = Card;
 
@@ -14,43 +12,40 @@ type HomeType = React.FC<Props>;
 export const HomePage: HomeType = (props) => {
     const [loading,] = useState(false);
     return (
-    <Row  gutter={[16, 16]}>
-        
-        <Col xs={{ span: 24,}} lg={{ span: 12,}}>
-            <Row  gutter={[16, 16]}>
-                <Col xs={{ span: 24,}} lg={{ span: 12,}}>
-                    <Card title="TODAY TASKS">
-                        <ListTasks />
-                    </Card>
-                </Col>
-                <Col xs={{ span: 24,}} lg={{ span: 12,}}>
-                    <Card title="DAY AT A GLANCE">
-                        <ListTasks />
-                    </Card>
-                </Col>
-            </Row>
-            <Row  gutter={[16, 16]}>
-                <Col xs={{ span: 24,}} lg={{ span: 24,}}>
-                    <Card title="MY LINKS" extra={<Button type="link" className="add-link">+ ADD</Button>}>
-                        <ListLinks />
-                    </Card>
-                </Col>
-            </Row>
-        </Col>
-        <Col xs={{ span: 24,}} lg={{ span: 12,}}>
-            <Card title="NEW CHATS">
-                <Row  gutter={[8, 8]}>
-                    <CardChat title="Tina Garcia" 
-                              description="description" 
-                              loading={loading} 
-                              image="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-                    <CardChat title="Tina Garcia" 
-                              description="description" 
-                              loading={loading} 
-                              image="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-                </Row>
-            </Card>
-        </Col>
-    </Row>
+    <>
+        <Row gutter={[16, 16]}>
+            <Col xs={{ span: 24,}} lg={{ span: 12,}}>
+                <CarouselComponent outline />
+            </Col>
+            <Col xs={{ span: 24,}} lg={{ span: 12,}}>
+                <Card title="ANOUNCEMENTS & SHOWS">
+                    <CarouselComponent />
+                </Card>
+            </Col>
+        </Row>
+        <Row gutter={[16, 16]}>
+            <Col xs={{ span: 24,}} lg={{ span: 18,}}>
+                <Card title="ANOUNCEMENTS & SHOWS">
+                    
+                </Card>
+            </Col>
+            <Col xs={{ span: 24,}} lg={{ span: 6,}}>
+                <Card title="RESOURCES">
+                    <div className="resource-card">
+                        <span className="text-bold">The Academy</span><br/>
+                        <span className="note">Take Training Courses</span>
+                    </div>
+                    <div className="resource-card accent">
+                        <span className="text-bold">The Playbook</span><br/>
+                        <span className="note">Our Corporate Guides</span>
+                    </div>
+                    <div className="resource-card secondary">
+                        <span className="text-bold">Quickbook Tutorials</span><br/>
+                        <span className="note">Show off those ninja skills</span>
+                    </div>
+                </Card>
+            </Col>
+        </Row>
+    </>
     );
 };
