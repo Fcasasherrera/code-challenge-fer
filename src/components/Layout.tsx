@@ -24,12 +24,16 @@ class LayoutComponent extends React.Component {
           <div className="logo" />
           <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
             <Menu.Item key="1">
-              <PieChartOutlined />
-              <span>Option 1</span>
+                {/* <a href="/"> */}
+                    <PieChartOutlined />
+                    <span>Option 1</span>
+                {/* </a> */}
             </Menu.Item>
             <Menu.Item key="2">
-              <DesktopOutlined />
-              <span>Option 2</span>
+                {/* <a href="/"> */}
+                    <DesktopOutlined />
+                    <span>Option 2</span>
+                {/* </a>    */}
             </Menu.Item>
           </Menu>
         </Sider>
@@ -44,7 +48,7 @@ class LayoutComponent extends React.Component {
                 {this.props.children}
             </div>
           </Content>
-          <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+          <Footer style={{ textAlign: 'center' }}></Footer>
         </Layout>
       </Layout>
     );

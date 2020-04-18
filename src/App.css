@@ -55,3 +55,25 @@
 .content-card {
   margin-top: 25px;
 }
+.add-link {
+  color: #b1cf43;
+}
+.add-link:hover {
+  color: #9ab33c;
+}
+.button-list {
+  text-decoration:none;
+  color: black;
+  flex-direction: column;
+}
+.button-list:hover {
+  color: #b1cf43;
+}
+.order-list {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px;
+}
+.title-list {
+  margin: 10px;
+}
