@@ -1,0 +1,57 @@
+/* @import 'antd/dist/antd.css'; */
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+.logo {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+  [data-theme="dark"] .site-layout .site-layout-background {
+    background: #141414;
+  }
+.ant-card {
+  -webkit-box-shadow: -5px 5px 35px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: -5px 5px 35px 0px rgba(0,0,0,0.1);
+  box-shadow: -5px 5px 35px 0px rgba(0,0,0,0.1);
+}
+.ant-card-meta-detail > div:not(:last-child) {
+  margin-bottom: 0 !important;
+}
+.ant-card-meta-description {
+  font-size: 12px;
+}
+
+.content-card {
+  margin-top: 25px;
+}
