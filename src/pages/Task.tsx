@@ -7,8 +7,6 @@ import { ListLinks } from "../components/ListLinks";
 import { ListTasks } from "../components/ListTasks";
 import { ListPendings } from "../components/ListPendings";
 
-const { Meta, } = Card;
-
 type Props = {};
 type TasksType = React.FC<Props>;
 

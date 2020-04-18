@@ -1,16 +1,13 @@
 
-import React, { useState } from "react";
+import React from "react";
 import '../App.css';
-import { Row, Col, Card, Button } from 'antd';
+import { Row, Col, Card } from 'antd';
 import { CarouselComponent } from "../components/Carousel";
-
-const { Meta, } = Card;
 
 type Props = {};
 type HomeType = React.FC<Props>;
 
 export const HomePage: HomeType = (props) => {
-    const [loading,] = useState(false);
     return (
     <>
         <Row gutter={[16, 16]}>

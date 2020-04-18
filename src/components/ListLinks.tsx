@@ -1,5 +1,5 @@
 import React from "react";
-import { List, Typography, Divider, Button } from 'antd';
+import { List } from 'antd';
 type Props = {
 
 };
@@ -17,7 +17,7 @@ export const ListLinks: ListLinksType = (props) => {
         dataSource={data}
         renderItem={item => 
         <List.Item>
-            <a className="button-list">
+            <a className="button-list" href="#">
                 {item}
             </a>
         </List.Item>}
